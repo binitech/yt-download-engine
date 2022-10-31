@@ -47,7 +47,7 @@ def find_video():
                         dow = stream.download()
                         if dow:
                             print('downloaded')
-                            bot.send_video(chat_id, dow, duration=video.length)
+                            bot.send_video(chat_id, dow, duration=video.length, width=1280, height=720)
                             update_id(video.video_id)
                             os.remove(dow)
                     except LiveStreamError:
