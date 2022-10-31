@@ -6,12 +6,12 @@ from pyrogram import Client
 import schedule
 import datetime
 import os
-from configs import api_id, api_hash, youtube_channel, running_interval, regex_matches, chat_id
+from configs import api_id, api_hash, youtube_channel, running_interval, regex_matches, chat_id, bot_token
 
 print('started at', datetime.datetime.now())
 
 
-bot = Client('bot', api_id, api_hash)
+bot = Client('bot', api_id, api_hash, bot_token=bot_token)
 bot.start()
 id_trash = eval(open('id_trash.txt', 'r').read())
 
